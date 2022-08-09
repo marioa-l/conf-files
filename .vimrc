@@ -57,20 +57,22 @@ vmap <silent> <Leader>s <Plug>SearchVisual
 "To latex
 filetype plugin indent on
 syntax enable
-autocmd FileType tex set colorcolumn=140
-autocmd FileType tex set tw=140
+autocmd FileType tex set colorcolumn=110
+autocmd FileType tex set tw=110
 autocmd FileType tex set nocursorline
-autocmd FileType tex set spell spelllang=en_us,es_es
+"autocmd FileType tex set spell spelllang=es_es
+autocmd FileType tex set spell spelllang=en_us
 "autocmd FileType tex set bg=light
 "autocmd FileType tex colorscheme PaperColor
-let g:vimtex_view_method = 'zathura'
-"let g:vimtex_view_general_viewer = 'okular'
-"let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+"let g:vimtex_view_method = 'zathura'
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let g:vimtex_syntax_conceal_disable = 1
 
 "To Translate
-let g:translator_target_lang='es'
-"let g:translator_target_lang='en'
+"let g:translator_target_lang='es'
+let g:translator_target_lang='en'
+let g:translator_windows_type='preview'
 "To show in cmdline
 nmap <silent> <Leader>t <Plug>Translate
 vmap <silent> <Leader>t <Plug>TranslateV
@@ -86,4 +88,6 @@ set relativenumber
 set cursorline
 set encoding=utf-8
 "set conceallevel=0
-"""
+set hidden
+nnoremap <Leader>b :ls<CR>:b<Space>
+set autoread
