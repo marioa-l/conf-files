@@ -1,8 +1,8 @@
 call plug#begin()
 
 Plug 'preservim/nerdtree'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'morhetz/gruvbox'
@@ -12,11 +12,12 @@ Plug 'tpope/vim-fugitive'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'lervag/vimtex'
 Plug 'voldikss/vim-translator'
+Plug 'sirver/ultisnips'
 
 call plug#end()
 
 "Themes and setting for airline
-let g:airline_theme='papercolor' " <theme> is a valid theme name
+"let g:airline_theme='papercolor' " <theme> is a valid theme name
 "Set default color scheme
 colorscheme gruvbox
 set bg=dark
@@ -62,8 +63,9 @@ autocmd FileType tex set tw=110
 autocmd FileType tex set nocursorline
 "autocmd FileType tex set spell spelllang=es_es
 autocmd FileType tex set spell spelllang=en_us
-"autocmd FileType tex set bg=light
-"autocmd FileType tex colorscheme PaperColor
+autocmd FileType tex set bg=light
+autocmd FileType tex colorscheme PaperColor
+"autocmd FileType tex set AirlineToggle
 "let g:vimtex_view_method = 'zathura'
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
@@ -84,10 +86,16 @@ nmap <silent> <Leader>r <Plug>TranslateR
 vmap <silent> <Leader>r <Plug>TranslateRV
 
 "General options
-set relativenumber
+"set relativenumber
 set cursorline
 set encoding=utf-8
 "set conceallevel=0
 set hidden
 nnoremap <Leader>b :ls<CR>:b<Space>
 set autoread
+" To snippets
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+set fillchars+=vert:\ 
