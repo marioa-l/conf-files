@@ -13,6 +13,8 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'lervag/vimtex'
 Plug 'voldikss/vim-translator'
 Plug 'sirver/ultisnips'
+Plug 'arcticicestudio/nord-vim'
+Plug 'sickill/vim-monokai'
 
 call plug#end()
 
@@ -63,12 +65,12 @@ autocmd FileType tex set tw=110
 autocmd FileType tex set nocursorline
 "autocmd FileType tex set spell spelllang=es_es
 autocmd FileType tex set spell spelllang=en_us
-autocmd FileType tex set bg=light
-autocmd FileType tex colorscheme PaperColor
+autocmd FileType tex set bg=dark
+autocmd FileType tex colorscheme gruvbox
 "autocmd FileType tex set AirlineToggle
-"let g:vimtex_view_method = 'zathura'
-let g:vimtex_view_general_viewer = 'okular'
-let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+let g:vimtex_view_method = 'zathura'
+"let g:vimtex_view_general_viewer = 'okular'
+"let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let g:vimtex_syntax_conceal_disable = 1
 
 "To Translate
@@ -98,4 +100,9 @@ let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
-set fillchars+=vert:\ 
+set fillchars+=vert:\
+
+" This will only work if `vim --version` includes `+clientserver`!
+if empty(v:servername) && exists('*remote_startserver')
+  call remote_startserver('VIM')
+endif
