@@ -68,9 +68,9 @@ autocmd FileType tex set spell spelllang=en_us
 autocmd FileType tex set bg=dark
 autocmd FileType tex colorscheme gruvbox
 "autocmd FileType tex set AirlineToggle
-let g:vimtex_view_method = 'zathura'
-"let g:vimtex_view_general_viewer = 'okular'
-"let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+"let g:vimtex_view_method = 'zathura'
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let g:vimtex_syntax_conceal_disable = 1
 
 "To Translate
