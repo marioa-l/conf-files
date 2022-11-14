@@ -30,17 +30,14 @@ let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
 let g:deoplete#enable_at_startup = 1
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-
 """"""""""""""""""""""""""""""
-
-" Tagbar
-map <F8> :TagbarToggle<CR>
 
 " Global Settings
 colorscheme gruvbox
 set number
 set colorcolumn=80
-set clipboard+=unnamedplus
+set clipboard^=unnamed,unnamedplus
 set splitbelow
 nmap <silent> <Leader>s <Plug>SearchNormal
 vmap <silent> <Leader>s <Plug>SearchVisuaL
+map <F8> :TagbarToggle<CR>
