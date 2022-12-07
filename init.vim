@@ -41,3 +41,5 @@ set splitbelow
 nmap <silent> <Leader>s <Plug>SearchNormal
 vmap <silent> <Leader>s <Plug>SearchVisuaL
 map <F8> :TagbarToggle<CR>
+set textwidth=80
+set wrap linebreak
