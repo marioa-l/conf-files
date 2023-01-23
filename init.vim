@@ -11,6 +11,8 @@ Plug 'sbdchd/neoformat'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'majutsushi/tagbar'
+Plug 'lervag/vimtex'
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
@@ -41,5 +43,8 @@ set splitbelow
 nmap <silent> <Leader>s <Plug>SearchNormal
 vmap <silent> <Leader>s <Plug>SearchVisuaL
 map <F8> :TagbarToggle<CR>
+autocmd FileType python,c,cpp TagbarOpen
+let g:tagbar_position='left'
 set textwidth=80
 set wrap linebreak
+set mouse=a
