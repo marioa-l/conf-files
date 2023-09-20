@@ -36,7 +36,7 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 " Global Settings
 colorscheme gruvbox
 set number
-set colorcolumn=80
+"set colorcolumn=80
 set clipboard^=unnamed,unnamedplus
 set splitbelow
 nmap <silent> <Leader>s <Plug>SearchNormal
